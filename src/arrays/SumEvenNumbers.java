@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SumEvenNumbers {
@@ -9,14 +10,14 @@ public class SumEvenNumbers {
 
     private static void sumEven() {
         Scanner sc = new Scanner(System.in);
-        int input = Integer.parseInt(sc.nextLine());
-        int sum = 0;
-        int evenNumber = 0;
+        String input = sc.nextLine();
+        String[] stringArray = input.split(" ");
 
-        for (int i = 0; i <= input; i++) {
-            sum += evenNumber;
-            evenNumber += 2;
-        }
+        int sum = Arrays.stream(stringArray)
+                .mapToInt(Integer::parseInt)
+                .filter(n -> n % 2 == 0)
+                .sum();
+
         System.out.println(sum);
     }
 }
