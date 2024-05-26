@@ -1,6 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class PrintCustomElement {
@@ -24,6 +23,5 @@ public class PrintCustomElement {
             collected[index++] = arr[i];
         }
         System.out.println(String.join(" ", collected));
-
     }
 }
